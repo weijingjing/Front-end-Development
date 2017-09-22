@@ -1,52 +1,72 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>html_text</title>
+    <!-- 添加css -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href='http://fonts.font.im/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-    
+    <p>看看引入css颜色有没有变化</p>
     <!-- Text attribute -->
     <h2>文本属性</h2>
     <h1>有序标签</h1>
     <ol>
         <li>
             <h3>文字的颜色</h3>
-            <p><span style="font-size:24px; margin:21px 0;color:blueviolet">Hello</span></p>
+            <p><span style="font-size:25px; margin:21px 0;color:green">Hello</span></p>
         </li>
         <li>
             <h3>文字的背景色</h3>
-            <p><span style="font-size:14px; margin:21px 20px; color:brown; line-height:4.2; background:yellowgreen;">Hello</span></p>
+            <p><span style="font-size:25px; margin:50px 50px; color:green; line-height:4.2; background:yellowgreen;">Hello</span></p>
         </li>
         <li>
-            <h3>文字的margin</h3>  
-            <p style="background:red;width:100px;height:100px"><span style="font-size:25px; margin:10px 10px 10px 10px; color:#090;line-height:20; background: #990">Hello</span></p>
+            <h3>文字的margin</h3>
+            <div id="test_margin_bgcolor"><span>Hello</span></div>
+            <p><span style="font-size:25px; margin:20px 0; color:green; line-height:5; background: #990">Hello</span></p>
         </li>
     </ol>
-<br>
+    <h3>字体</h3>
+    <h1>无序标签</h1>
     <ul>
-        <h3>字体</h3>
         <li>
             <h4>Times New Roman</h4>
             <div>
-                <p><span style="font-size:32px;margin:50px;color:cadetblue;font-family:'Times New Roman', Times, serif">Hello</span></p>
+                <p><span style="font-size:25px;margin:50px;color:green;font-family:'Times New Roman'">Hello</span></p>
             </div>
         </li>
-        <h1>无序标签</h1>
         <li>
             <h4>黑体</h4>
             <div>
-                <p><span style="font-size:32px;margin:50px;color:cadetblue;font-family:黑体">Hello</span></p>
+                <p><span style="font-size:25px;margin:50px;color:green;font-family:黑体">Hello</span></p>
             </div>
         </li>
         <li>
             <h4>Monacao</h4>
             <div>
-                <p><span style="font-size:32px;margin:50px;color:cadetblue;font-family:Monacao">Hello</span></p>
+                <p><span style="font-size:25px;margin:50px;color:green;font-family:Monacao">Hello</span></p>
             </div>
+        </li>
+        <li>
+            <h4>Open Sans</h4>
+            <div>
+                <p><span style="font-size:25px;margin:50px;color:green;font-family: 'Open Sans', sans-serif;">Hello</span></p>
+            </div>
+        </li>
+        <li>
+            <h4>default</h4>
+
+            <span class="font-demo">Hello</span>
+            <h4>other</h4>
+
+            <span id="font-test">Hello</span>
         </li>
     </ul>
 </body>
+
 </html>

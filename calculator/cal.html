@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="cal.css">
+    <title>calculator</title>
+</head>
+<body>
+        <table id="calculater" onClick="calculater()">
+                <tr>
+                    <!-- colspan合并五列 -->
+                    <td id="display" colspan="5">0</td>
+                </tr>
+                <tr>
+                    <td class="numberkey" >1</td>
+                    <td class="numberkey" >2</td>
+                    <td class="numberkey" >3</td>
+                    <td class="numberkey" >+</td>
+                    <td class="numberkey"  id="deletesign">c</td>   
+                </tr>
+                <tr>
+                    <td class="numberkey" >4</td>
+                    <td class="numberkey" >5</td>
+                    <td class="numberkey" >6</td>
+                    <td class="numberkey" >-</td>
+                    <!-- rowspan合并三行 -->
+                    <td rowspan="3" id="equality" onclick="resultscalcaulte()">=</td> 
+                </tr>
+                <tr>
+                    <td class="numberkey" >7</td>
+                    <td class="numberkey" >8</td>
+                    <td class="numberkey" >7</td>
+                    <td class="numberkey" >*</td>
+                </tr>
+                <tr >
+                    <td class="numberkey" >+/-</td>
+                    <td class="numberkey" >0</td>
+                    <td class="numberkey" >.</td>
+                    <td class="numberkey" >/</td>            
+                </tr>
+    <script src="cal.js"></script>
+</body>
+</html>

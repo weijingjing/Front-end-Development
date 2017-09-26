@@ -1,8 +1,16 @@
 body {
     background-color:#E6F1AE;
 }
+
 p{
     color:blue;
+}
+
+h2{
+    margin:0;
+    padding: 20px 0;
+    color:black;
+    text-shadow: 2px 2px 1px red;
 }
 
 .font-demo {
@@ -41,6 +49,47 @@ p{
     width:400px;
     height: 400px;
     border:2px solid black;
+    /*子元素和父元素的距离 margin*/
     margin:50px auto;
+    /*文字和边框的距离 padding*/
     padding:40px;
+}
+
+.css-demo-unit{
+    /*width:500px;
+    height: 200px;*/
+    background-color: rosybrown;
+    border: 2px solid black;
+    font-size: 32px;
+}
+
+#css-demo-unit-px{
+    margin:10px 50px;
+}
+
+#css-demo-unit-em{
+    margin:10px 50em;
+}
+
+#css-demo-unit-rem{
+    margin:10px 50rem;
+}
+
+#css-demo-unit-auto{
+    margin:auto;
+}
+
+#css-demo-unit-percent{
+    margin:0 20%;
+}
+
+img{
+    display: block;
+    margin:0 auto;
+}
+
+#mul-result{
+    width:100px;
+    height:20px;
+    border:1px solid red;
 }

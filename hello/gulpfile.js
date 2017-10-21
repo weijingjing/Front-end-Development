@@ -12,3 +12,5 @@ gulp.task('browser-sync',function(){
     //html文件改变，就自动刷新页面
     gulp.watch("src/**/*.html").on("change",reload);
 });
+gulp.task('serve',['browser-sync']);
+gulp.task('default',['serve']);

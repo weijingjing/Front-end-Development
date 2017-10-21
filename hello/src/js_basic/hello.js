@@ -1,15 +1,14 @@
-import multiply from '../math/math.js';
+import { multiply } from '../math/math.js';
 
 
+function createJsBasic(node) {
+    // 在标题显示Hello
+    const root = createItems(node);
 //对象.函数 --把内容去出来赋给变量
 var myHeading = document.querySelector('#hello_title');
-//给这个变量赋值
-//myHeading.innerHTML = '<p>Hello!</p>';
 //將變量保存下來
 var old = myHeading.innerHTML;
 myHeading.innerHTML = old + '<p>Hello!</p>';
-
-
 
 
 //自定义函数
@@ -30,7 +29,6 @@ function display(num1, num2) {
 };
 
 
-
 //显示数字
 document.getElementById("one").onclick = function () {
     var result = document.getElementById('result');
@@ -41,7 +39,8 @@ document.getElementById("two").onclick = function () {
     var result = document.getElementById('result');
     result.innerHTML = result.innerHTML + '2';
 };
-
+}
+export default createJsBasic;
 
 
 

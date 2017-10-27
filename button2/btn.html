@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>button 练习</title>
+<style>
+input{width:100px; height:40px; border:none; background:url(images/btn.png)}
+a{display:inline-block; height:40px; line-height:40px; text-decoration:none; background:url(images/btn_bg.png); padding-left:15px;}
+
+/*<a>标签定义按钮*/
+
+/*background-position 设置背景图片起始位置*/
+a:hover{background-position:0 -80px;}
+a span{display:inline-block; height:40px; color:#fff; background:url(images/btn_bg.png) right -40px; padding-right:15px;}
+a:hover span{background-position:right -120px;}
+
+/*class控制样式*/
+.css3Btn{ display:inline-block; height:38px; color:#fff; padding: 0 15px; border:1px solid #3c81c4; background:url(images/css3_btn_bg.png); border-radius:5px;}
+.css3Btn:hover{ background-position:0 -40px;}
+
+</style>
+</head>
+
+<body>
+<input type="button" value="按钮" />
+<input type="submit" value="提交"  />
+<input type="reset" value="重置"  />
+<br />
+<br />
+<!-- 其中javascript:是伪协议，它可以让我们通过一个链接来调用javascript函数.而采用这个方式 javascript:;可以实现A标签的点击事件运行时，如果页面内容很多，有滚动条时，页面不会乱跳，用户体验更好。 -->
+<a href="javascript:;"><span>第一个按钮</span></a>
+
+<a class="css3Btn" href="javascript:;" onclick="alert('慕课网')">第二个按钮</a>
+</body>
+</html>

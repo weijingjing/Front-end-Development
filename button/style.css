@@ -10,18 +10,28 @@ body{
     width: 800px;
     height:280px;
     margin:50px auto;
-    position:relative;
+    /* overflow 属性规定当内容溢出元素框时发生的事情。 */
+    overflow: hidden;
 }
 .box .link{
+    display: inline-block;
     width:205px;
     height:280px;
     float:left;
     margin:0 20px;
+    position: relative;
 }
+/* 
+transition 属性是一个简写属性，用于设置四个过渡属性:
+transition-property规定设置过渡效果的 CSS 属性的名称。
+transition-duration规定完成过渡效果需要多少秒或毫秒。
+transition-timing-function规定速度效果的速度曲线。
+transition-delay定义过渡效果何时开始。
+ */
 .link .icon{
+    display: block;
     width:100%;
     height:190px;
-    display:inline-block;
     /* 设置按钮变形过度效果 */
     transition:0.2s ease-out;
     /* 适应各种浏览器 */
@@ -30,14 +40,18 @@ body{
     -o-transition:0.2s ease-out;
 }
 .link-miss .icon{
-    background:url(./images/mission.png) no-repeat center center; 
+    background:url(./images/mission.png) no-repeat center 0; 
 }
 .link-play .icon{
-    background:url(./images/play.png) no-repeat center center; 
+    background:url(./images/play.png) no-repeat center 0; 
 }
 .link-touch .icon{
-    background:url(./images/touch.png) no-repeat center center; 
+    background:url(./images/touch.png) no-repeat center 0; 
 }
+
+ /* 
+    transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜
+ */
 .link .icon:hover{
     /* 变形的角度 3D旋转360度 沿着x,y轴*/
     transform: rotate(360deg) scale(1.2);
@@ -54,11 +68,15 @@ body{
     text-decoration:none;
     position:relative;
     color:#2DCB70;
+    font-size: 18px;
     font-family:Arial;
-    font-weight:bolder;
-    border:2px solid rgba(255, 255, 255, 0.5);
+    font-weight:bold;
+    border:2px solid rgba(255, 255, 255, 0.8);
     padding-left: 20px;
     margin:0 auto;
+/* 
+box-sizing 属性允许以特定的方式定义匹配某个区域的特定元素。
+ */
     box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
@@ -72,10 +90,13 @@ body{
 }
 .button:hover{
     border:2px solid rgba(255, 255, 255, 1);
-    background-position: 40px center;
+    background-position: 140px center;
 }
 .button .line{
-    display: block;
+    -moz-transition:ease 0.4s;
+    -o-transition:ease 0.4s;
+    -webkit-transition:ease 0.4s;
+    transition:ease 0.4s;
     position:absolute;
     background:none;
 }
@@ -134,19 +155,19 @@ body{
 /* 设置弹框的属性 */
 .tip{
     position:absolute;
-    padding:0.14px;
+    padding:0px 14px;
     height: 35px;
     line-height:35px;
     background:#2DCB70;
     color:#fff;
-    font-size:18px;
+    font-size:16px;
     margin:0 auto;
     border-radius:3px;
     -ms-border-radius:3px;
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
     -o-border-radius:3px;
-    top:100px;
+    top:160px;
     opacity: 0;
 }
 .tip em{
@@ -161,6 +182,6 @@ body{
     border-top-color:#2DCB70;
     position:absolute;
     top:35px;
-    left:50%;
+    /* left:50%; */
     margin-left:-3px;
 }

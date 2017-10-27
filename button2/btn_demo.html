@@ -4,21 +4,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>圆角水晶按钮</title>
 <style type="text/css">
+/*全局样式*/
 *{ margin:0; padding:0}
+
 .mydiv{ margin:50px; padding:30px; width:600px; background-color:#ddd}
 h4{ color:#333}
-input{*vertical-align:middle}
+
+/**vertical-align元素垂直对其的方式 middle把子元素放在父元素中间*/
+input{vertical-align:middle}
 .text{ height:30px; line-height:30px; width:200px}
 .btn_old{width:50px; height:40px;}
-.btnA{ width:100px;  height:40px; border:none; font-size:14px; color:#fff; background:url(images/btn.png)}
 
+/*提交按钮样式*/
+.btnA{width:100px; height:40px; border:none; font-size:14px; color:#fff; background:url(images/btn.png)}
+
+/*text-decoration:none 定义的文本样式，none默认 underline文本下的一条线*/
 a{height:40px;line-height:40px;display:inline-block;font-size:14px; color:#fff;text-decoration:none}
 
+/*cursor:pointer 鼠标放上去的时候变成小手状*/
 .btnB{padding-left:15px;cursor:pointer;background:url(images/btn_bg.png)}
 .btnB span{display:inline-block;padding-right:20px;background:url(images/btn_bg.png) right -40px}
 
+/*鼠标放上去的时候样式改变*/
 .btnB:hover{background-position:0 -80px;}
-.btnB:hover span{background-position: right -120px;}
+.btnB:hover span{background-position: right -120px;color: #DE4E42;}
+
 
 .btnC{ height:38px;padding:0 16px; background:url(images/css3_btn_bg.png); border:#3C81C4 1px solid; border-radius:5px}
 .btnC:hover{background-position:0 -40px;border:#86B2D1 1px solid}
@@ -29,13 +39,14 @@ a{height:40px;line-height:40px;display:inline-block;font-size:14px; color:#fff;t
 
 <body>
 <div class="mydiv">
+<!-- <form>表单中action指提交表单后执行的程序URL地址 method表示提交方式get、post -->
     <form action="get.php" method="post">
         <label>用户名：<input class="text" type="text" value="张三" /></label><br /><br />
         <label>密　码：<input class="text" type="password" /></label><br />
     <br />
-        <input class="btn_old" type="button" value="按钮" />
+        <input class="btn_old" type="button" value="普通按钮" />
         <input class="btnA" type="submit" value="提交按钮" />
-        <a class="btnB" href="javascript:;" onclick="alert('慕课网')"><span>ds asd sad fad fsad fa df适应圆角按钮</span></a>
+        <a class="btnB" href="javascript:;" onclick="alert('慕课网')"><span>适应圆角按钮</span></a>
         <a class="btnC" href="javascript:;" onclick="alert('慕课网')">CSS3 圆角按钮</a>
     </form>
 </div>
